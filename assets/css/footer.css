@@ -1,0 +1,329 @@
+/* ============================================================
+   FOOTER — Ambulanter Pflegedienst Grafing
+   footer.css — all footer styles in one place
+   ============================================================ */
+
+.footer {
+  background: #0D1B2A;
+  color: #e8d0d3;
+  padding: 48px 0 20px;
+  margin-top: 0;
+}
+
+.footer .container {
+  max-width: 1120px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+/* Grid layout */
+.footer-grid {
+  display: grid;
+  grid-template-columns: minmax(240px, 1.35fr) minmax(140px, .8fr) minmax(150px, .9fr) minmax(130px, .8fr) minmax(210px, 1fr);
+  gap: 32px;
+  align-items: start;
+}
+
+.footer-grid > div {
+  min-width: 0;
+  padding-left: 26px;
+  border-left: 1px solid rgba(196,122,130, .18);
+}
+
+.footer-grid > div:first-child {
+  padding-left: 0;
+  border-left: 0;
+}
+
+/* Brand / logo */
+.footer-brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.footer-logo {
+  height: 44px;
+  width: auto;
+  max-width: 220px;
+}
+
+.footer-tagline,
+.footer-slogan {
+  display: none;
+}
+
+/* Left column */
+.footer-left-col {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Contact rows */
+.footer-contact-box {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin: 0;
+  padding: 0;
+  background: transparent;
+  border: 0;
+  border-radius: 0;
+  box-shadow: none;
+}
+
+.footer-contact-row {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  color: #fde8ea;
+  font-size: 14px;
+  line-height: 1.4;
+}
+
+/* Icon sizing — consistent for all SVG icons */
+.footer-contact-row svg {
+  width: 16px;
+  height: 16px;
+  min-width: 16px;
+  min-height: 16px;
+  flex-shrink: 0;
+  margin-top: 2px;
+  stroke: #c47a82;
+  fill: none;
+}
+
+.footer-contact-row a {
+  color: #fde8ea !important;
+  text-decoration: none;
+  word-break: break-word;
+}
+
+.footer-contact-row a:hover {
+  color: #c47a82 !important;
+}
+
+/* Section headings */
+.footer h4,
+.footer-social-label {
+  display: block;
+  margin: 0 0 14px;
+  color: #fff;
+  font-size: 15px;
+  font-weight: 900;
+  letter-spacing: 0;
+  text-transform: none;
+}
+
+/* Nav links */
+.footer a {
+  display: block;
+  margin: 0 0 10px;
+  color: #e8d0d3;
+  text-decoration: none;
+  font-size: 14px;
+  transition: color .15s ease, transform .15s ease;
+}
+
+.footer a:hover {
+  color: #c47a82;
+  transform: translateX(3px);
+}
+
+/* Social block */
+.footer-social-integrated {
+  display: block;
+  margin: 0;
+}
+
+.footer-social-links {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.footer-social-card {
+  display: flex !important;
+  align-items: center;
+  gap: 12px;
+  min-height: 56px;
+  margin: 0 !important;
+  padding: 10px 14px;
+  border-radius: 12px;
+  background: rgba(255, 255, 255, .07);
+  border: 1px solid rgba(255, 255, 255, .1);
+  color: #fff !important;
+  text-decoration: none !important;
+  transform: none !important;
+  transition: background .18s, border-color .18s, transform .18s;
+  box-shadow: none;
+  width: 100%;
+  box-sizing: border-box;
+  overflow: hidden;
+  min-width: 0;
+}
+
+.footer-social-card:hover {
+  background: rgba(255, 255, 255, .12) !important;
+  border-color: rgba(255, 255, 255, .2);
+  transform: translateX(4px) !important;
+}
+
+.footer-social-card svg {
+  width: 34px;
+  height: 34px;
+  flex-shrink: 0;
+}
+
+.footer-social-card-text {
+  min-width: 0;
+  overflow: hidden;
+}
+
+.footer-social-card-text strong {
+  display: block;
+  color: #fff;
+  font-size: 13px;
+  font-weight: 900;
+  margin-bottom: 2px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.footer-social-card-text span {
+  display: block;
+  color: #c4a0a6;
+  font-size: 12px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* Hide old social button styles */
+.footer-social,
+.footer-social-new,
+.footer-social-btn {
+  display: none !important;
+}
+
+/* Bottom bar */
+.footer-bottom {
+  margin-top: 32px;
+  padding-top: 18px;
+  border-top: 1px solid rgba(196,122,130, .18);
+  text-align: center;
+  color: #c4a0a6;
+  font-size: 13px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  flex-wrap: wrap;
+  line-height: 1.6;
+}
+
+.footer-cookie-btn {
+  background: none;
+  border: 0;
+  color: #c4a0a6;
+  font: inherit;
+  cursor: pointer;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-cookie-btn:hover {
+  color: #c47a82;
+  text-decoration: underline;
+}
+
+/* ── Responsive ────────────────────────────── */
+@media (max-width: 1100px) {
+  .footer-grid {
+    grid-template-columns: 1.3fr repeat(2, 1fr);
+    gap: 28px;
+  }
+
+  .footer-social-integrated {
+    grid-column: auto;
+  }
+}
+
+@media (max-width: 768px) {
+  .footer-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 24px;
+  }
+
+  .footer-grid > div {
+    padding-left: 0;
+    border-left: 0;
+  }
+
+  .footer-social-links {
+    flex-direction: column;
+  }
+
+  .footer-social-card-text span {
+    display: block;
+  }
+}
+
+@media (max-width: 620px) {
+  .footer {
+    padding: 32px 0 20px;
+  }
+
+  .footer .container {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  .footer-grid {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+
+  .footer-brand {
+    justify-content: flex-start;
+    margin-bottom: 16px;
+  }
+
+  .footer-logo {
+    max-width: 200px;
+    height: auto;
+    max-height: 48px;
+  }
+
+  .footer-contact-box {
+    gap: 12px;
+  }
+
+  .footer-contact-row {
+    font-size: 14px;
+    align-items: flex-start;
+  }
+
+  .footer h4,
+  .footer-social-label {
+    margin: 0 0 12px;
+  }
+
+  .footer-social-card {
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  .footer-bottom {
+    margin-top: 24px;
+    padding-top: 16px;
+    line-height: 1.8;
+  }
+
+  .footer-cookie-btn {
+    display: inline;
+    line-height: inherit;
+  }
+}
