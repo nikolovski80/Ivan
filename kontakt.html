@@ -1,440 +1,164 @@
 <!DOCTYPE html>
 <html lang="de">
-
-<!-- Mirrored from www.st-christophorus-krankenfahrdienst.de/kontakt.html by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 12 Jul 2026 19:31:37 GMT -->
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="color-scheme" content="light">
-<meta name="theme-color" content="#ffffff">
-<title>Kontakt – St. Christophorus Krankenfahrdienst GmbH | 08092 2320174</title>
-<meta name="description" content="Kontakt zum St. Christophorus Krankenfahrdienst GmbH – Hauptstraße 36, 85567 Grafing. Rufen Sie an: 08092 2320174 oder schreiben Sie uns. 24-Stunden-Rufbereitschaft.">
+<title>Kontakt – St. Christophorus Krankenfahrdienst GmbH</title>
+<meta name="description" content="Krankenfahrt anfragen oder Termin vereinbaren. St. Christophorus Krankenfahrdienst GmbH, Münchener Str. 22, 85614 Kirchseeon.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="assets/css/modern-redesign.css">
 <link rel="stylesheet" href="assets/css/footer.css">
-<style>
-/* ── Phone CTA bar ── */
-.phone-cta{
-  background:linear-gradient(135deg,#0798a8 0%,#067887 100%);
-  color:white;
-  text-align:center;
-  padding:22px 1rem;
-}
-.phone-cta p{margin:0 0 6px;font-size:15px;opacity:.9;}
-.phone-cta a{
-  display:inline-flex;align-items:center;gap:10px;
-  color:white;text-decoration:none;
-  font-size:clamp(26px,5vw,38px);font-weight:900;letter-spacing:-.01em;
-}
-.phone-cta a:hover{opacity:.85;}
-.phone-cta .phone-sub{font-size:13px;opacity:.75;margin-top:6px;}
-
-/* ── Contact grid ── */
-.contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:32px;align-items:stretch;}
-.contact-info-box{background:var(--surface,#f8fcfd);border:1px solid #dbeff2;border-radius:20px;padding:32px;display:flex;flex-direction:column;}
-.contact-form-box{background:var(--surface,#f8fcfd);border:1px solid #dbeff2;border-radius:20px;padding:32px;display:flex;flex-direction:column;}
-.contact-form-box form{display:flex;flex-direction:column;flex:1;}
-.contact-info-row{display:flex;gap:14px;align-items:flex-start;margin-bottom:18px;}
-.contact-info-icon{width:40px;height:40px;border-radius:12px;background:#eafbfd;color:#0798a8;display:flex;align-items:center;justify-content:center;font-size:18px;flex-shrink:0;}
-.contact-info-label{font-size:12px;color:#667985;font-weight:700;text-transform:uppercase;letter-spacing:.05em;margin:0 0 2px;}
-.contact-info-value{font-size:15px;color:#1f3642;margin:0;}
-.contact-info-value a{color:#0798a8;text-decoration:none;font-weight:700;}
-.contact-info-value a:hover{text-decoration:underline;}
-
-/* ── Form ── */
-.contact-form-box{background:var(--surface,#f8fcfd);border:1px solid #dbeff2;border-radius:20px;padding:32px;}
-.contact-form-box h2{font-size:22px;margin:0 0 20px;}
-.form-field{margin-bottom:16px;}
-.form-field label{display:block;font-size:13px;font-weight:700;color:#1f3642;margin-bottom:6px;}
-.form-field input,.form-field textarea,.form-field select{
-  width:100%;box-sizing:border-box;
-  border:1.5px solid #dbeff2;border-radius:12px;
-  padding:12px 16px;font-size:15px;color:#1f3642;
-  background:#fafefe;outline:none;
-  transition:border-color .18s,box-shadow .18s;
-  font-family:inherit;
-}
-.form-field input:focus,.form-field textarea:focus{border-color:#0798a8;box-shadow:0 0 0 3px rgba(7,152,168,.12);}
-.form-field textarea{resize:vertical;min-height:120px;}
-.hp-field{display:none;}
-.form-note{font-size:12px;color:#667985;margin-top:14px;line-height:1.5;}
-
-/* ── Map section ── */
-.map-section{margin-top:48px;}
-.map-section h2{font-size:clamp(22px,3vw,32px);margin:0 0 8px;}
-.map-section .lead{margin-bottom:24px;}
-.map-offices{display:grid;grid-template-columns:1fr 1fr;gap:20px;margin-bottom:24px;}
-@media(max-width:640px){.map-offices{grid-template-columns:1fr;}}
-.office-card{background:white;border:1px solid #dbeff2;border-radius:16px;padding:20px 24px;display:flex;gap:16px;align-items:flex-start;}
-.office-icon{font-size:28px;flex-shrink:0;}
-.office-info h3{font-size:16px;font-weight:900;color:#0798a8;margin:0 0 4px;}
-.office-info p{font-size:14px;color:#1f3642;margin:0 0 10px;line-height:1.5;}
-.office-link{font-size:13px;font-weight:700;color:#0798a8;text-decoration:none;}
-.office-link:hover{text-decoration:underline;}
-.map-embed{border-radius:20px;overflow:hidden;box-shadow:0 8px 32px rgba(7,152,168,.10);border:1px solid #dbeff2;}
-.map-embed iframe{width:100%;height:420px;border:none;display:block;}
-
-/* ── Review section ── */
-.review-section{background:linear-gradient(135deg,#eafbfd 0%,#f8fcfd 100%);border-radius:24px;padding:40px;margin-top:48px;}
-.review-section .badge{margin-bottom:12px;}
-.review-section h2{font-size:clamp(22px,3vw,32px);margin:0 0 6px;}
-.review-section .lead{margin-bottom:24px;}
-.review-score-row{display:flex;align-items:center;gap:12px;margin-bottom:28px;}
-.stars-big{display:flex;gap:4px;}
-.star{font-size:28px;color:#f5a623;}
-.score-num{font-size:26px;font-weight:900;color:#1f3642;}
-.score-count{font-size:14px;color:#667985;}
-.review-cards{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-bottom:28px;}
-@media(max-width:640px){.review-cards{grid-template-columns:1fr;}}
-.review-card{background:white;border:1px solid #dbeff2;border-radius:16px;padding:20px;}
-.review-card-stars{display:flex;gap:3px;margin-bottom:10px;}
-.review-card-stars .star{font-size:14px;}
-.review-card-text{font-size:14px;color:#1f3642;line-height:1.6;margin:0 0 14px;font-style:italic;}
-.review-card-author{display:flex;align-items:center;gap:8px;}
-.review-avatar{width:28px;height:28px;border-radius:50%;background:#eafbfd;color:#0798a8;font-size:11px;font-weight:900;display:flex;align-items:center;justify-content:center;}
-.review-author-name{font-size:13px;color:#667985;}
-.review-divider{border:none;border-top:1px solid #dbeff2;margin:4px 0 24px;}
-.review-qr-box{background:white;border:1px solid #dbeff2;border-radius:16px;padding:24px;display:flex;gap:20px;align-items:center;}
-@media(max-width:580px){.review-qr-box{flex-direction:column;text-align:center;}}
-.qr-img{width:80px;height:80px;flex-shrink:0;border-radius:10px;border:1px solid #dbeff2;padding:6px;background:white;}
-.qr-img svg{width:68px;height:68px;}
-.qr-text h3{font-size:16px;font-weight:900;color:#1f3642;margin:0 0 4px;}
-.qr-text p{font-size:13px;color:#667985;margin:0 0 14px;line-height:1.5;}
-.btn-google{display:inline-flex;align-items:center;gap:8px;background:#0798a8;color:white;border:none;border-radius:999px;padding:10px 20px;font-size:14px;font-weight:700;cursor:pointer;text-decoration:none;transition:background .18s;}
-.btn-google:hover{background:#067887;}
-</style>
-<style id="contact-mobile-fix">
-/* Mobile fix for kontakt.html */
-@media (max-width: 768px){
-  .phone-cta{
-    padding:18px 18px 20px!important;
-  }
-  .phone-cta a{
-    font-size:28px!important;
-    line-height:1.15!important;
-    justify-content:center!important;
-    flex-wrap:wrap!important;
-  }
-  .page-hero{
-    padding:30px 0 24px!important;
-  }
-  .page-hero h1{
-    font-size:34px!important;
-    line-height:1.08!important;
-  }
-  .contact-grid{
-    grid-template-columns:1fr!important;
-    gap:20px!important;
-    align-items:start!important;
-  }
-  .contact-info-box,
-  .contact-form-box{
-    width:100%!important;
-    box-sizing:border-box!important;
-    padding:22px 18px!important;
-    border-radius:18px!important;
-  }
-  .contact-info-box h2,
-  .contact-form-box h2{
-    font-size:22px!important;
-    margin-bottom:18px!important;
-  }
-  .contact-info-row{
-    gap:12px!important;
-    margin-bottom:16px!important;
-  }
-  .contact-info-icon{
-    width:36px!important;
-    height:36px!important;
-    min-width:36px!important;
-    border-radius:11px!important;
-  }
-  .contact-info-value{
-    font-size:14px!important;
-    line-height:1.55!important;
-    overflow-wrap:anywhere!important;
-  }
-  .form-field input,
-  .form-field textarea,
-  .form-field select{
-    font-size:16px!important;
-    padding:12px 14px!important;
-    border-radius:12px!important;
-  }
-  .form-field textarea{
-    min-height:130px!important;
-  }
-  .contact-form-box .btn{
-    width:100%!important;
-    min-height:48px!important;
-    justify-content:center!important;
-    border-radius:999px!important;
-  }
-  .map-section{
-    margin-bottom:34px!important;
-  }
-  .map-section h2{
-    font-size:26px!important;
-    line-height:1.15!important;
-  }
-  .map-offices{
-    grid-template-columns:1fr!important;
-    gap:14px!important;
-  }
-  .office-card{
-    padding:18px!important;
-    border-radius:16px!important;
-    gap:12px!important;
-  }
-  .office-icon{
-    font-size:24px!important;
-  }
-  .office-info h3{
-    font-size:15px!important;
-    line-height:1.25!important;
-  }
-  .office-info p,
-  .office-link{
-    font-size:14px!important;
-  }
-  .map-embed{
-    border-radius:18px!important;
-  }
-  .map-embed iframe{
-    height:300px!important;
-  }
-}
-
-@media (max-width: 420px){
-  .phone-cta a{font-size:25px!important;}
-  .page-hero h1{font-size:30px!important;}
-  .contact-info-box,
-  .contact-form-box{padding:20px 16px!important;}
-  .map-embed iframe{height:260px!important;}
-}
-</style>
-<!-- SEO:APG -->
-<link rel="canonical" href="kontakt.html">
-<meta name="robots" content="index, follow">
-<meta property="og:type" content="website">
-<meta property="og:locale" content="de_DE">
-<meta property="og:site_name" content="St. Christophorus Krankenfahrdienst GmbH">
-<meta property="og:title" content="Kontakt – St. Christophorus Krankenfahrdienst GmbH | 08092 2320174">
-<meta property="og:description" content="Kontakt zum St. Christophorus Krankenfahrdienst GmbH – Hauptstraße 36, 85567 Grafing. Rufen Sie an: 08092 2320174 oder schreiben Sie uns. 24-Stunden-Rufbereitschaft.">
-<meta property="og:url" content="https://www.st-christophorus-krankenfahrdienst.de/kontakt.html">
-<meta property="og:image" content="https://www.st-christophorus-krankenfahrdienst.de/assets/img/hero/hero2.png">
-<meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Kontakt – St. Christophorus Krankenfahrdienst GmbH | 08092 2320174">
-<meta name="twitter:description" content="Kontakt zum St. Christophorus Krankenfahrdienst GmbH – Hauptstraße 36, 85567 Grafing. Rufen Sie an: 08092 2320174 oder schreiben Sie uns. 24-Stunden-Rufbereitschaft.">
-<meta name="twitter:image" content="https://www.st-christophorus-krankenfahrdienst.de/assets/img/hero/hero2.png">
-
-<!-- /SEO:APG -->
 </head>
 <body>
-<div id="apg-loader" aria-hidden="true"><div id="apg-loader-ring"><img src="assets/img/logo/placeholder-loader.png" alt="" width="48" height="48"></div></div>
-
-<div class="topbar">
-  <div class="container">
-    <span>St. Christophorus Krankenfahrdienst GmbH · Hauptstraße 36, 85567 Grafing</span>
-    <span><strong>info@st-christophorus-krankenfahrdienst.de</strong> · <a href="tel:+4980922320174" style="color:inherit;font-weight:700;">📞 08092 2320174</a></span>
+<div id="apg-loader" aria-hidden="true">
+  <div id="apg-loader-ring">
+    <img src="assets/img/logo/placeholder-loader.png" alt="" width="48" height="48">
+  </div>
+</div><div class="topbar">
+  <div class="container" style="display:flex;justify-content:space-between;align-items:center;gap:16px;flex-wrap:wrap;">
+    <span>St. Christophorus Krankenfahrdienst GmbH · Münchener Str. 22, 85614 Kirchseeon</span>
+    <span><a href="tel:+4980922320174" style="color:#fff;font-weight:700;text-decoration:none;">📞 08092 2320174</a></span>
   </div>
 </div>
 <header class="header">
   <div class="container nav">
-    <a class="logo" href="index-2.html"><img src="assets/img/logo/logo-st-christophorus.svg" alt="St. Christophorus Krankenfahrdienst GmbH Logo"></a>
-    <button class="menu" type="button" aria-label="Menü öffnen" aria-expanded="false"><span class="menu-bar"></span><span class="menu-bar"></span><span class="menu-bar"></span></button>
+    <a class="logo" href="index.html">
+      <img src="assets/img/logo/logo-st-christophorus.svg" alt="St. Christophorus Krankenfahrdienst GmbH" height="56">
+    </a>
+    <button class="menu" type="button" aria-label="Menü öffnen" aria-expanded="false">
+      <span class="menu-bar"></span><span class="menu-bar"></span><span class="menu-bar"></span>
+    </button>
     <nav class="nav-links">
-      <a href="index-2.html">Über uns</a>
+      <a href="index.html">Startseite</a>
       <div class="nav-item">
-        <a href class="nav-trigger" type="button" aria-expanded="false">Leistungen ▾</a>
+        <button class="nav-trigger" aria-expanded="false">Leistungen ▾</button>
         <div class="mega-menu">
           <div class="mega-grid">
-            <a class="mega-link" href="grundpflege.html"><img src="assets/img/services/basic_care.webp" alt="Krankenfahrten"><div><strong>Krankenfahrten</strong><span>Unterstützung im Alltag und bei der Körperpflege.</span></div></a>
-            <a class="mega-link" href="medizinische-versorgung.html"><img src="assets/img/services/medical_care.webp" alt="Rollstuhlfahrten"><div><strong>Rollstuhlfahrten</strong><span>Behandlungspflege nach ärztlicher Verordnung.</span></div></a>
-            <a class="mega-link" href="betreuung-zu-hause.html"><img src="assets/img/gallery/holistic-care.webp" alt="Dialysefahrten"><div><strong>Dialysefahrten</strong><span>Begleitung zuhause und außer Haus.</span></div></a>
-            <a class="mega-link" href="hauswirtschaft.html"><img src="assets/img/gallery/housekeeping-hero.webp" alt="Chemo- & Strahlentherapie"><div><strong>Chemo- & Strahlentherapie</strong><span>Hilfe im Haushalt und im täglichen Leben.</span></div></a>
-            <a class="mega-link" href="palliative-betreuung.html"><img src="assets/img/gallery/palliative-menu.webp" alt="Arztfahrten"><div><strong>Arztfahrten</strong><span>Würdevolle Begleitung in vertrauter Umgebung.</span></div></a>
-            <a class="mega-link" href="rund-um-die-uhr.html"><img src="assets/img/services/oncall.webp" alt="24-Stunden-Rufbereitschaft"><div><strong>24-Stunden-Rufbereitschaft</strong><span>Rund um die Uhr für Sie erreichbar.</span></div></a>
+            <a class="mega-link" href="grundpflege.html"><div><strong>Krankenfahrten</strong><span>Zuverlässig zu Ärzten und Kliniken.</span></div></a>
+            <a class="mega-link" href="medizinische-versorgung.html"><div><strong>Rollstuhlfahrten</strong><span>Sicher und komfortabel.</span></div></a>
+            <a class="mega-link" href="betreuung-zu-hause.html"><div><strong>Liegendtransporte</strong><span>Professionell für liegende Patienten.</span></div></a>
+            <a class="mega-link" href="hauswirtschaft.html"><div><strong>Dialyse &amp; Therapie</strong><span>Pünktlich zu jedem Termin.</span></div></a>
+            <a class="mega-link" href="palliative-betreuung.html"><div><strong>Kostenübernahme</strong><span>Abrechnung mit Krankenkassen.</span></div></a>
+            <a class="mega-link" href="rund-um-die-uhr.html"><div><strong>24h Rufbereitschaft</strong><span>Immer erreichbar.</span></div></a>
           </div>
         </div>
       </div>
+      <a href="kontakt.html">FAQ</a>
       <a href="stellenangebote.html">Stellenangebote</a>
       <a class="btn" href="kontakt.html">Kontakt</a>
     </nav>
   </div>
-</header>
-
-<main>
-
-<!-- Phone CTA -->
-<div class="phone-cta">
-  <p>Jetzt anrufen — wir sind für Sie da:</p>
-  <a href="tel:+4980922320174">📞 08092 2320174</a>
-  <p class="phone-sub">24-Stunden-Rufbereitschaft · rund um die Uhr für Sie da</p>
-</div>
-
-<section class="page-hero"><div class="container"><h1>Kontakt aufnehmen</h1><p class="lead">Wir sind persönlich, telefonisch oder per E-Mail für Sie erreichbar.</p></div></section>
-
-<section class="section" style="padding-top:0;">
+</header><div class="page-hero" style="background:linear-gradient(135deg,#0D1B2A 0%,#1a2f45 60%,#8B1E2D 100%);padding:52px 0 44px;">
   <div class="container">
-
-    <!-- MAP FIRST -->
-    <div class="map-section" style="margin-top:0;margin-bottom:48px;">
-      <div class="badge">Standorte</div>
-      <h2>Unsere zwei Standorte</h2>
-      <p class="lead">Wir sind in Grafing und Kirchseeon für Sie da.</p>
-
-      <div class="map-offices">
-        <a class="office-card-img" href="https://maps.google.com/?q=Hauptstra%c3%9fe+36+85567+Grafing" target="_blank" rel="noopener">
-          <img src="assets/img/cities/grafing.webp" alt="Büro Grafing" loading="lazy">
-          <div class="office-img-overlay">
-            <strong>Grafing — Hauptstandort</strong>
-            <span>Hauptstraße 36, 85567 Grafing</span>
-            <span class="office-img-link">In Google Maps öffnen →</span>
-          </div>
-        </a>
-        <a class="office-card-img" href="https://maps.google.com/?q=M%c3%bcnchner+Stra%c3%9fe+22+85614+Kirchseeon" target="_blank" rel="noopener">
-          <img src="assets/img/cities/kirchseeon-office.webp" alt="Büro Kirchseeon" loading="lazy">
-          <div class="office-img-overlay">
-            <strong>Kirchseeon — Filiale</strong>
-            <span>Münchner Straße 22, 85614 Kirchseeon</span>
-            <span class="office-img-link">In Google Maps öffnen →</span>
-          </div>
-        </a>
+    <p style="font-size:13px;color:rgba(255,255,255,.55);margin:0 0 10px;">
+      <a href="index.html" style="color:rgba(255,255,255,.55);text-decoration:none;">Startseite</a>
+      &rsaquo; <span style="color:#fff;">Kontakt</span>
+    </p>
+    <h1 style="font-size:clamp(26px,4vw,44px);color:#fff;margin:0 0 12px;letter-spacing:-.02em;">Kontakt</h1>
+    <p style="font-size:16px;color:rgba(255,255,255,.78);margin:0;">Wir sind für Sie da – schnell, persönlich und zuverlässig</p>
+  </div>
+</div>
+<main>
+<section class="section">
+  <div class="container">
+    <div class="two-col">
+      <div>
+        <div class="content-box">
+          <h2 style="font-size:clamp(22px,3vw,30px);margin-bottom:24px;">Jetzt Ihre Krankenfahrt anfragen</h2>
+          <form class="form" method="post" action="#">
+            <div style="display:grid;grid-template-columns:1fr 1fr;gap:14px;">
+              <div>
+                <label style="font-size:13px;font-weight:700;display:block;margin-bottom:6px;">Vorname und Nachname *</label>
+                <input type="text" name="name" placeholder="Max Mustermann" required>
+              </div>
+              <div>
+                <label style="font-size:13px;font-weight:700;display:block;margin-bottom:6px;">Telefonnummer *</label>
+                <input type="tel" name="phone" placeholder="+49 ..." required>
+              </div>
+            </div>
+            <div>
+              <label style="font-size:13px;font-weight:700;display:block;margin-bottom:6px;">E-Mail</label>
+              <input type="email" name="email" placeholder="ihre@email.de">
+            </div>
+            <div style="display:grid;grid-template-columns:1fr 1fr;gap:14px;">
+              <div>
+                <label style="font-size:13px;font-weight:700;display:block;margin-bottom:6px;">Abholadresse *</label>
+                <input type="text" name="pickup" placeholder="Straße, Ort" required>
+              </div>
+              <div>
+                <label style="font-size:13px;font-weight:700;display:block;margin-bottom:6px;">Zieladresse *</label>
+                <input type="text" name="destination" placeholder="Straße, Ort" required>
+              </div>
+            </div>
+            <div style="display:grid;grid-template-columns:1fr 1fr;gap:14px;">
+              <div>
+                <label style="font-size:13px;font-weight:700;display:block;margin-bottom:6px;">Datum</label>
+                <input type="date" name="date">
+              </div>
+              <div>
+                <label style="font-size:13px;font-weight:700;display:block;margin-bottom:6px;">Uhrzeit</label>
+                <input type="time" name="time">
+              </div>
+            </div>
+            <div>
+              <label style="font-size:13px;font-weight:700;display:block;margin-bottom:8px;">Art der Fahrt</label>
+              <div style="display:grid;grid-template-columns:1fr 1fr;gap:8px;">
+                <label style="display:flex;align-items:center;gap:8px;font-size:14px;cursor:pointer;"><input type="checkbox" name="type" value="Krankenfahrt" style="width:auto;"> Krankenfahrt</label><label style="display:flex;align-items:center;gap:8px;font-size:14px;cursor:pointer;"><input type="checkbox" name="type" value="Rollstuhlfahrt" style="width:auto;"> Rollstuhlfahrt</label><label style="display:flex;align-items:center;gap:8px;font-size:14px;cursor:pointer;"><input type="checkbox" name="type" value="Liegendtransport" style="width:auto;"> Liegendtransport</label><label style="display:flex;align-items:center;gap:8px;font-size:14px;cursor:pointer;"><input type="checkbox" name="type" value="Dialysefahrt" style="width:auto;"> Dialysefahrt</label><label style="display:flex;align-items:center;gap:8px;font-size:14px;cursor:pointer;"><input type="checkbox" name="type" value="Chemotherapie" style="width:auto;"> Chemotherapie</label><label style="display:flex;align-items:center;gap:8px;font-size:14px;cursor:pointer;"><input type="checkbox" name="type" value="Strahlentherapie" style="width:auto;"> Strahlentherapie</label><label style="display:flex;align-items:center;gap:8px;font-size:14px;cursor:pointer;"><input type="checkbox" name="type" value="Rehafahrt" style="width:auto;"> Rehafahrt</label><label style="display:flex;align-items:center;gap:8px;font-size:14px;cursor:pointer;"><input type="checkbox" name="type" value="Privatfahrt" style="width:auto;"> Privatfahrt</label>
+              </div>
+            </div>
+            <div>
+              <label style="font-size:13px;font-weight:700;display:block;margin-bottom:6px;">Nachricht</label>
+              <textarea name="message" placeholder="Weitere Informationen zu Ihrer Fahrt..."></textarea>
+            </div>
+            <button type="submit" class="btn" style="width:auto;align-self:flex-start;">Anfrage absenden</button>
+          </form>
+        </div>
       </div>
 
-      <div class="map-embed">
-        <iframe
-          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d21210.5!2d11.966!3d48.047!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4776a7e0b76e7e91%3A0x0!2sHauptstra%C3%9Fe+36%2C+85567+Grafing!5e0!3m2!1sde!2sde!4v1234567890"
-          title="Standorte St. Christophorus Krankenfahrdienst GmbH"
-          loading="lazy"
-          referrerpolicy="no-referrer-when-downgrade"
-          allowfullscreen>
-        </iframe>
+      <div>
+        <div class="content-box">
+          <h3>Kontaktdaten</h3>
+          <div style="display:flex;flex-direction:column;gap:16px;margin-top:8px;">
+            <div style="display:flex;gap:14px;align-items:flex-start;">
+              <div style="width:44px;height:44px;background:#f8e8ea;border-radius:12px;display:flex;align-items:center;justify-content:center;flex-shrink:0;">📍</div>
+              <div><strong style="display:block;font-size:15px;">Adresse</strong><span style="color:#60656D;font-size:14px;">St. Christophorus Krankenfahrdienst GmbH<br>Münchener Str. 22<br>85614 Kirchseeon</span></div>
+            </div>
+            <div style="display:flex;gap:14px;align-items:flex-start;">
+              <div style="width:44px;height:44px;background:#f8e8ea;border-radius:12px;display:flex;align-items:center;justify-content:center;flex-shrink:0;">📞</div>
+              <div><strong style="display:block;font-size:15px;">Telefon</strong><a href="tel:+4980922320174" style="color:#8B1E2D;font-size:15px;font-weight:700;text-decoration:none;">08092 2320174</a></div>
+            </div>
+            <div style="display:flex;gap:14px;align-items:flex-start;">
+              <div style="width:44px;height:44px;background:#f8e8ea;border-radius:12px;display:flex;align-items:center;justify-content:center;flex-shrink:0;">📧</div>
+              <div><strong style="display:block;font-size:15px;">E-Mail</strong><a href="mailto:info@st-christophorus-krankenfahrdienst.de" style="color:#8B1E2D;font-size:13px;text-decoration:none;word-break:break-all;">info@st-christophorus-krankenfahrdienst.de</a></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="content-box" style="margin-top:24px;">
+          <h3>Unsere Erreichbarkeit</h3>
+          <div style="display:flex;flex-direction:column;gap:10px;margin-top:8px;">
+            <div style="display:flex;justify-content:space-between;padding:10px 0;border-bottom:1px solid #e8d0d3;"><span style="font-weight:600;font-size:14px;">Montag – Freitag</span><span style="color:#60656D;font-size:14px;">07:00 – 18:00 Uhr</span></div><div style="display:flex;justify-content:space-between;padding:10px 0;border-bottom:1px solid #e8d0d3;"><span style="font-weight:600;font-size:14px;">Samstag</span><span style="color:#60656D;font-size:14px;">Nach Vereinbarung</span></div><div style="display:flex;justify-content:space-between;padding:10px 0;border-bottom:1px solid #e8d0d3;"><span style="font-weight:600;font-size:14px;">Sonn- und Feiertage</span><span style="color:#60656D;font-size:14px;">Nach Vereinbarung</span></div>
+          </div>
+          <div style="background:#f8e8ea;border-radius:14px;padding:16px;margin-top:16px;text-align:center;">
+            <p style="font-size:13px;color:#8B1E2D;font-weight:700;margin:0;">24h Rufbereitschaft</p>
+            <a href="tel:+4980922320174" style="font-size:22px;font-weight:900;color:#0D1B2A;text-decoration:none;display:block;margin-top:4px;">08092 2320174</a>
+          </div>
+        </div>
+
+        <div class="content-box" style="margin-top:24px;">
+          <h3>Einsatzgebiet</h3>
+          <p style="font-size:14px;color:#60656D;">Von Kirchseeon täglich unterwegs nach:</p>
+          <div style="display:flex;flex-wrap:wrap;gap:8px;margin-top:10px;">
+            <span style="background:#f8e8ea;border-radius:999px;padding:5px 12px;font-size:12px;font-weight:600;color:#8B1E2D;">Kirchseeon</span><span style="background:#f8e8ea;border-radius:999px;padding:5px 12px;font-size:12px;font-weight:600;color:#8B1E2D;">Grafing</span><span style="background:#f8e8ea;border-radius:999px;padding:5px 12px;font-size:12px;font-weight:600;color:#8B1E2D;">Ebersberg</span><span style="background:#f8e8ea;border-radius:999px;padding:5px 12px;font-size:12px;font-weight:600;color:#8B1E2D;">München</span><span style="background:#f8e8ea;border-radius:999px;padding:5px 12px;font-size:12px;font-weight:600;color:#8B1E2D;">Vaterstetten</span><span style="background:#f8e8ea;border-radius:999px;padding:5px 12px;font-size:12px;font-weight:600;color:#8B1E2D;">Markt Schwaben</span><span style="background:#f8e8ea;border-radius:999px;padding:5px 12px;font-size:12px;font-weight:600;color:#8B1E2D;">Rosenheim</span><span style="background:#f8e8ea;border-radius:999px;padding:5px 12px;font-size:12px;font-weight:600;color:#8B1E2D;">Bad Aibling</span><span style="background:#f8e8ea;border-radius:999px;padding:5px 12px;font-size:12px;font-weight:600;color:#8B1E2D;">Wasserburg am Inn</span><span style="background:#f8e8ea;border-radius:999px;padding:5px 12px;font-size:12px;font-weight:600;color:#8B1E2D;">Ganz Bayern</span>
+          </div>
+        </div>
       </div>
     </div>
-
-    <!-- CONTACT GRID -->
-    <div class="contact-grid">
-
-      <!-- Info -->
-      <div class="contact-info-box">
-        <h2>Unsere Standorte</h2>
-
-        <div class="contact-info-row">
-          <div class="contact-info-icon">🏢</div>
-          <div>
-            <p class="contact-info-label">Hauptstandort Grafing</p>
-            <p class="contact-info-value">Hauptstraße 36, 85567 Grafing<br>
-            <a href="https://maps.google.com/?q=Hauptstra%c3%9fe+36+85567+Grafing" target="_blank" rel="noopener">Route planen →</a></p>
-          </div>
-        </div>
-
-        <div class="contact-info-row">
-          <div class="contact-info-icon">🏠</div>
-          <div>
-            <p class="contact-info-label">Filiale Kirchseeon</p>
-            <p class="contact-info-value">Münchner Straße 22, 85614 Kirchseeon<br>
-            <a href="https://maps.google.com/?q=M%c3%bcnchner+Stra%c3%9fe+22+85614+Kirchseeon" target="_blank" rel="noopener">Route planen →</a></p>
-          </div>
-        </div>
-
-        <div class="contact-info-row">
-          <div class="contact-info-icon">📞</div>
-          <div>
-            <p class="contact-info-label">Telefon</p>
-            <p class="contact-info-value"><a href="tel:+4980922320174">08092 2320174</a></p>
-          </div>
-        </div>
-
-        <div class="contact-info-row">
-          <div class="contact-info-icon">✉️</div>
-          <div>
-            <p class="contact-info-label">E-Mail</p>
-            <p class="contact-info-value"><a href="mailto:info@st-christophorus-krankenfahrdienst.de">info@st-christophorus-krankenfahrdienst.de</a></p>
-          </div>
-        </div>
-
-        <div class="contact-info-row">
-          <div class="contact-info-icon">🕐</div>
-          <div>
-            <p class="contact-info-label">Öffnungszeiten</p>
-            <p class="contact-info-value">Täglich rund um die Uhr<br>24-Stunden-Rufbereitschaft</p>
-          </div>
-        </div>
-      </div>
-
-      <!-- Form -->
-      <div class="contact-form-box">
-        <h2>Nachricht senden</h2>
-        <div id="form-status" style="display:none;padding:14px 16px;border-radius:12px;margin-bottom:16px;font-size:14px;font-weight:600;"></div>
-        <form action="https://www.st-christophorus-krankenfahrdienst.de/mail.php" method="post">
-
-          <!-- Honeypot anti-spam -->
-          <div class="hp-field">
-            <input type="text" name="website" tabindex="-1" autocomplete="off">
-          </div>
-
-          <div class="form-field">
-            <label for="name">Ihr Name *</label>
-            <input id="name" name="name" type="text" placeholder="Max Mustermann" required
-              oninvalid="this.setCustomValidity('Bitte geben Sie Ihren Namen an.')" oninput="this.setCustomValidity('')">
-          </div>
-          <div class="form-field">
-            <label for="email">E-Mail-Adresse *</label>
-            <input id="email" name="email" type="email" placeholder="max@beispiel.de" required
-              oninvalid="this.setCustomValidity(this.validity.valueMissing ? 'Bitte geben Sie Ihre E-Mail-Adresse an.' : 'Bitte geben Sie eine gültige E-Mail-Adresse an.')" oninput="this.setCustomValidity('')">
-          </div>
-          <div class="form-field">
-            <label for="phone">Telefonnummer</label>
-            <input id="phone" name="phone" type="tel" placeholder="08092 …">
-          </div>
-          <div class="form-field">
-            <label for="subject">Betreff</label>
-            <input id="subject" name="subject" type="text" placeholder="Beratungsgespräch, Krankenfahrten anfragen …">
-          </div>
-          <div class="form-field">
-            <label for="message">Ihre Nachricht *</label>
-            <textarea id="message" name="message" placeholder="Wie können wir helfen?" required
-              oninvalid="this.setCustomValidity('Bitte geben Sie eine Nachricht ein.')" oninput="this.setCustomValidity('')"></textarea>
-          </div>
-
-          <button class="btn" type="submit" style="width:100%;justify-content:center;">Nachricht senden →</button>
-          <p class="form-note">* Pflichtfelder. Ihre Daten werden ausschließlich zur Bearbeitung Ihrer Anfrage verwendet und nicht an Dritte weitergegeben.</p>
-        </form>
-      </div>
-      <script>
-        (function(){
-          var params = new URLSearchParams(window.location.search);
-          var box = document.getElementById('form-status');
-          if (!box) return;
-          if (params.get('sent') === '1') {
-            box.style.display = 'block';
-            box.style.background = '#e7fbfd';
-            box.style.color = '#067887';
-            box.style.border = '1px solid #dbeff2';
-            box.textContent = 'Vielen Dank! Ihre Nachricht wurde erfolgreich gesendet. Wir melden uns in Kürze bei Ihnen.';
-            window.history.replaceState({}, '', window.location.pathname);
-          } else if (params.get('error') === '1') {
-            box.style.display = 'block';
-            box.style.background = '#fdecea';
-            box.style.color = '#b3261e';
-            box.style.border = '1px solid #f5c6c2';
-            box.textContent = 'Entschuldigung, Ihre Nachricht konnte nicht gesendet werden. Bitte versuchen Sie es erneut oder schreiben Sie uns direkt an info@st-christophorus-krankenfahrdienst.de.';
-            window.history.replaceState({}, '', window.location.pathname);
-          }
-        })();
-      </script>
-
-    </div>
-
   </div>
 </section>
-
 </main>
-
 <footer class="footer">
   <div class="container">
     <div class="footer-grid">
@@ -442,73 +166,65 @@
         <div class="footer-brand">
           <img src="assets/img/logo/logo-st-christophorus-white.svg" alt="St. Christophorus Krankenfahrdienst GmbH" class="footer-logo">
         </div>
+        <p style="font-size:13px;color:rgba(255,255,255,.5);margin:0 0 16px;font-style:italic;">Mit Herz. Mit Verantwortung. Sicher ans Ziel.</p>
         <div class="footer-contact-box">
           <div class="footer-contact-row">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
-            <span>Hauptstraße 36, 85567 Grafing</span>
+            <svg viewBox="0 0 24 24" fill="none" stroke="#c47a82" stroke-width="2" width="16" height="16"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+            <span>Münchener Str. 22, 85614 Kirchseeon</span>
           </div>
           <div class="footer-contact-row">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
-            <span>24-Std.-Rufbereitschaft · immer erreichbar</span>
+            <svg viewBox="0 0 24 24" fill="none" stroke="#c47a82" stroke-width="2" width="16" height="16"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.77 1h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.69a16 16 0 0 0 6 6l1.06-1.06a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+            <a href="tel:+4980922320174" style="color:#fde8ea;text-decoration:none;">08092 2320174</a>
           </div>
           <div class="footer-contact-row">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.77 1h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.69a16 16 0 0 0 6 6l1.06-1.06a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
-            <a href="tel:+4980922320174">08092 2320174</a>
-          </div>
-          <div class="footer-contact-row">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="4" width="20" height="16" rx="2"/><polyline points="2,4 12,13 22,4"/></svg>
-            <a href="mailto:info@st-christophorus-krankenfahrdienst.de">info@st-christophorus-krankenfahrdienst.de</a>
+            <svg viewBox="0 0 24 24" fill="none" stroke="#c47a82" stroke-width="2" width="16" height="16"><rect x="2" y="4" width="20" height="16" rx="2"/><polyline points="2,6 12,13 22,6"/></svg>
+            <a href="mailto:info@st-christophorus-krankenfahrdienst.de" style="color:#fde8ea;text-decoration:none;word-break:break-all;">info@st-christophorus-krankenfahrdienst.de</a>
           </div>
         </div>
       </div>
-
       <div>
         <h4>Leistungen</h4>
         <a href="grundpflege.html">Krankenfahrten</a>
         <a href="medizinische-versorgung.html">Rollstuhlfahrten</a>
-        <a href="hauswirtschaft.html">Chemo- & Strahlentherapie</a>
-        <a href="palliative-betreuung.html">Arztfahrten</a>
-        <a href="rund-um-die-uhr.html">24-Stunden-Rufbereitschaft</a>
+        <a href="betreuung-zu-hause.html">Liegendtransporte</a>
+        <a href="hauswirtschaft.html">Dialyse &amp; Therapie</a>
+        <a href="palliative-betreuung.html">Kostenübernahme</a>
+        <a href="rund-um-die-uhr.html">24h Rufbereitschaft</a>
       </div>
-
       <div>
-        <h4>Städte</h4>
-        <a href="staedte/grafing.html">Grafing</a>
-        <a href="staedte/ebersberg.html">Ebersberg</a>
-        <a href="staedte/kirchseeon.html">Kirchseeon</a>
-        <a href="staedte/assling.html">Aßling</a>
-        <a href="staedte/steinhoring.html">Steinhöring</a>
-        <a href="staedte/glonn.html">Glonn</a>
+        <h4>Einsatzgebiet</h4>
+        <a href="#">Kirchseeon</a>
+        <a href="#">Grafing</a>
+        <a href="#">Ebersberg</a>
+        <a href="#">München</a>
+        <a href="#">Rosenheim</a>
+        <a href="#">Bayern</a>
       </div>
-
       <div>
         <h4>Rechtliches</h4>
         <a href="impressum.html">Impressum</a>
         <a href="datenschutz.html">Datenschutz</a>
         <a href="agb.html">AGB</a>
+        <a href="stellenangebote.html">Stellenangebote</a>
+        <a href="kontakt.html">Kontakt</a>
       </div>
-
       <div class="footer-social-integrated">
         <span class="footer-social-label">Folgen Sie uns</span>
         <div class="footer-social-links">
-          <a class="footer-social-card footer-social-card-ig" href="https://www.instagram.com/st.christophorus.krankenfahrdienst/" target="_blank" rel="noopener" aria-label="Instagram">
-            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><defs><radialGradient id="ig-fc" cx="30%" cy="107%" r="130%"><stop offset="0%" stop-color="#ffd879"/><stop offset="30%" stop-color="#f56040"/><stop offset="60%" stop-color="#e1306c"/><stop offset="90%" stop-color="#833ab4"/></radialGradient></defs><rect x="1" y="1" width="22" height="22" rx="6" fill="url(#ig-fc)"/><circle cx="12" cy="12" r="4.2" stroke="white" stroke-width="1.7" fill="none"/><circle cx="17.5" cy="6.5" r="1.2" fill="white"/></svg>
+          <a class="footer-social-card" href="https://www.instagram.com/st.christophorus.krankenfahrdienst/" target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24" width="34" height="34"><defs><radialGradient id="ig" cx="30%" cy="107%" r="130%"><stop offset="0%" stop-color="#ffd879"/><stop offset="30%" stop-color="#f56040"/><stop offset="60%" stop-color="#e1306c"/><stop offset="90%" stop-color="#833ab4"/></radialGradient></defs><rect x="1" y="1" width="22" height="22" rx="6" fill="url(#ig)"/><circle cx="12" cy="12" r="4.2" stroke="white" stroke-width="1.7" fill="none"/><circle cx="17.5" cy="6.5" r="1.2" fill="white"/></svg>
             <div class="footer-social-card-text"><strong>Instagram</strong><span>@st.christophorus.krankenfahrdienst</span></div>
           </a>
-          <a class="footer-social-card footer-social-card-fb" href="https://www.facebook.com/profile.php?id=100090471557041" target="_blank" rel="noopener" aria-label="Facebook">
-            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><rect width="24" height="24" rx="6" fill="#1877F2"/><path d="M16 8h-2.5C13.12 8 13 8.37 13 9v2h3l-.4 3H13v7h-3v-7H8v-3h2V8.5C10 6.6 11.34 5 13.5 5H16v3z" fill="white"/></svg>
-            <div class="footer-social-card-text"><strong>Facebook</strong><span>Amb. St. Christophorus Krankenfahrdienst GmbH</span></div>
+          <a class="footer-social-card" href="https://www.facebook.com/" target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24" width="34" height="34"><rect width="24" height="24" rx="6" fill="#1877F2"/><path d="M16 8h-2.5C13.12 8 13 8.37 13 9v2h3l-.4 3H13v7h-3v-7H8v-3h2V8.5C10 6.6 11.34 5 13.5 5H16v3z" fill="white"/></svg>
+            <div class="footer-social-card-text"><strong>Facebook</strong><span>St. Christophorus Krankenfahrdienst</span></div>
           </a>
         </div>
       </div>
-        </div>
-</div>
-
-    <div class="footer-bottom">© 2026 St. Christophorus Krankenfahrdienst GmbH&nbsp;&nbsp;·&nbsp;&nbsp;<button class="footer-cookie-btn" type="button" onclick="apgOpenCookieSettings();return false;">Cookie-Einstellungen</button></div>
+    </div>
+    <div class="footer-bottom">© 2026 St. Christophorus Krankenfahrdienst GmbH · Münchener Str. 22, 85614 Kirchseeon</div>
   </div>
 </footer>
 <script src="assets/js/modern-redesign.js"></script>
 </body>
-
-<!-- Mirrored from www.st-christophorus-krankenfahrdienst.de/kontakt.html by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 12 Jul 2026 19:31:37 GMT -->
 </html>
