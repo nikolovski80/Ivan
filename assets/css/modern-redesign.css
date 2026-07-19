@@ -2253,3 +2253,42 @@ body.apg-menu-open .scroll-top{
 @media(max-width:640px){
   .service-cta-photo{width:64px;height:64px;border-radius:16px}
 }
+
+
+/* Footer grid – bez Einsatzgebiet kolone */
+.footer-grid {
+  grid-template-columns: 2fr 1fr 1fr 1.5fr !important;
+}
+/* Social kartice – puna širina */
+.footer-social-links {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 100%;
+}
+.footer-social-card {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  width: 100%;
+  box-sizing: border-box;
+  overflow: visible;
+}
+.footer-social-card-text {
+  overflow: visible;
+  min-width: 0;
+  flex: 1;
+}
+.footer-social-card-text strong { color: #fff; font-size: 13px; display: block; }
+.footer-social-card-text span   { color: rgba(255,255,255,.6); font-size: 11px; }
+/* Nav – logo 100px */
+.nav { min-height: 110px; }
+.logo img { height: 100px; width: auto; max-width: 280px; }
+/* Mega-menu thumbnail */
+.mega-link img { width:32px;height:32px;object-fit:contain;border-radius:6px;flex-shrink:0; }
+@media(max-width:900px){
+  .footer-grid { grid-template-columns: 1fr 1fr !important; }
+}
+@media(max-width:600px){
+  .footer-grid { grid-template-columns: 1fr !important; }
+}
