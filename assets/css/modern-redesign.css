@@ -127,8 +127,8 @@ img{max-width:100%;display:block}
 .topbar{background:var(--primary-dark);color:white;font-size:14px}
 .topbar .container{display:flex;justify-content:space-between;gap:20px;padding:9px 0;flex-wrap:wrap}
 .header{position:sticky;top:0;background:rgba(255,255,255,.96);backdrop-filter:blur(14px);z-index:100;border-bottom:1px solid var(--border)}
-.nav{min-height:96px;display:flex;justify-content:space-between;align-items:center;gap:24px}
-.logo img{height:76px;width:auto;max-width:220px;}
+.nav{min-height:104px;display:flex;justify-content:space-between;align-items:center;gap:24px}
+.logo img{height:88px;width:auto;max-width:260px;}
 .nav-links{display:flex;align-items:center;gap:20px;font-weight:700;color:#294653}
 .nav-links a:hover{color:var(--primary)}
 .btn{display:inline-flex;justify-content:center;align-items:center;min-height:46px;padding:0 22px;border-radius:999px;background:var(--primary);color:white!important;font-weight:800;box-shadow:var(--shadow);border:0;cursor:pointer}
