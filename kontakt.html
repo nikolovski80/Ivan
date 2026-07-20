@@ -80,6 +80,9 @@
 </div>
 <style>
 /* ── Kontakt page styles ── */
+*, *::before, *::after { box-sizing: border-box; }
+.container { width: 100%; max-width: 1160px; margin: 0 auto; padding: 0 24px; box-sizing: border-box; }
+
 .k-wrap {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -95,6 +98,8 @@
   box-shadow: 0 4px 20px rgba(139,30,45,.07);
   box-sizing: border-box;
   width: 100%;
+  max-width: 100%;
+  overflow: hidden;
 }
 .k-title  { font-size: 20px; font-weight: 800; color: #0D1B2A; margin: 0 0 20px; }
 .k-subtitle { font-size: 16px; font-weight: 800; color: #0D1B2A; margin: 0 0 14px; }
@@ -123,6 +128,9 @@
   grid-template-columns: 1fr 1fr;
   gap: 8px;
   margin-top: 4px;
+  width: 100%;
+  box-sizing: border-box;
+  overflow: hidden;
 }
 .k-check {
   display: flex;
@@ -131,6 +139,10 @@
   font-size: 13px;
   cursor: pointer;
   color: #424242;
+  width: 100%;
+  box-sizing: border-box;
+  overflow: hidden;
+  min-width: 0;
 }
 .k-check input { width: 15px; height: 15px; accent-color: #8B1E2D; flex-shrink: 0; }
 .k-btn {
@@ -200,11 +212,21 @@
 /* ── MOBILE ── */
 @media (max-width: 768px) {
   .k-wrap    { grid-template-columns: 1fr !important; }
+  .k-col     { width: 100% !important; max-width: 100% !important; }
   .k-row2    { grid-template-columns: 1fr !important; }
   .k-checks  { grid-template-columns: 1fr !important; }
-  .k-card    { padding: 20px 18px; }
-  .k-btn     { width: 100%; justify-content: center; }
+  .k-check   { width: 100% !important; max-width: 100% !important; }
+  .k-card    { padding: 18px 16px !important; max-width: 100% !important; }
+  .k-btn     { width: 100% !important; justify-content: center; }
   .k-hour-row { flex-direction: column; align-items: flex-start; gap: 2px; }
+  .k-field input,
+  .k-field textarea { font-size: 16px; } /* sprječava iOS zoom */
+}
+@media (max-width: 480px) {
+  .k-checks  { grid-template-columns: 1fr !important; }
+  .k-row2    { grid-template-columns: 1fr !important; }
+  .k-wrap    { gap: 16px !important; }
+  .k-card    { padding: 16px 14px !important; }
 }
 </style>
 <main>
