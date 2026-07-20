@@ -153,18 +153,18 @@
   padding: 4px 0;
 }
 .k-checks li label {
-  display: flex;
-  flex-direction: row;
+  display: grid;
+  grid-template-columns: 20px 1fr;
   align-items: center;
-  justify-content: flex-start;
-  gap: 10px;
+  gap: 12px;
   font-size: 14px;
   color: #424242;
   cursor: pointer;
   width: 100%;
-  padding: 8px 0;
+  padding: 10px 0;
   border-bottom: 1px solid #f0e0e0;
   text-align: left;
+  box-sizing: border-box;
 }
 .k-checks li label input[type="checkbox"] {
   width: 18px;
@@ -173,6 +173,7 @@
   accent-color: #8B1E2D;
   margin: 0;
   cursor: pointer;
+  justify-self: start;
 }
 .k-btn {
   display: inline-flex;

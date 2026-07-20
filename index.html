@@ -395,6 +395,8 @@
   border: 1px solid #e8d0d3;
   box-shadow: 0 2px 10px rgba(139,30,45,.05);
   gap: 12px;
+  box-sizing: border-box;
+  width: 100%;
 }
 .ziel-svg {
   display: flex;
@@ -415,12 +417,18 @@
 @media (max-width: 900px) {
   .ziel-grid { grid-template-columns: repeat(2, 1fr); }
 }
-@media (max-width: 480px) {
+@media (max-width: 600px) {
   .ziel-grid {
-    grid-template-columns: repeat(2, 1fr);
-    justify-items: center;
+    grid-template-columns: 1fr !important;
   }
-  .ziel-item { width: 100%; }
+  .ziel-item {
+    flex-direction: row !important;
+    text-align: left !important;
+    padding: 14px 16px !important;
+    gap: 16px !important;
+    align-items: center !important;
+  }
+  .ziel-label { font-size: 15px !important; }
 }
 </style>
 <link rel="icon" type="image/png" href="assets/img/logo/favicon.png">
