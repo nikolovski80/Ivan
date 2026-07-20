@@ -78,195 +78,253 @@
     <p style="font-size:16px;color:rgba(255,255,255,.78);margin:0;">Wir sind für Sie da – schnell, persönlich und zuverlässig</p>
   </div>
 </div>
-<main>
 <style>
-@media(max-width:768px){
-  .k-grid{grid-template-columns:1fr!important;}
-  .k-form-row{grid-template-columns:1fr!important;}
-  .k-check-grid{grid-template-columns:1fr!important;}
+/* ── Kontakt page styles ── */
+.k-wrap {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 28px;
+  align-items: start;
+}
+.k-col { display: flex; flex-direction: column; gap: 20px; }
+.k-card {
+  background: #fff;
+  border-left: 4px solid #8B1E2D;
+  border-radius: 0 14px 14px 0;
+  padding: 24px;
+  box-shadow: 0 4px 20px rgba(139,30,45,.07);
+  box-sizing: border-box;
+  width: 100%;
+}
+.k-title  { font-size: 20px; font-weight: 800; color: #0D1B2A; margin: 0 0 20px; }
+.k-subtitle { font-size: 16px; font-weight: 800; color: #0D1B2A; margin: 0 0 14px; }
+/* Forma */
+.k-form { display: flex; flex-direction: column; gap: 14px; }
+.k-row2 { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+.k-field { display: flex; flex-direction: column; gap: 6px; }
+.k-field label { font-size: 12px; font-weight: 700; color: #0D1B2A; }
+.k-field input,
+.k-field textarea {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 11px 14px;
+  border: 1.5px solid #e8d0d3;
+  border-radius: 10px;
+  font-size: 14px;
+  font-family: Montserrat, sans-serif;
+  outline: none;
+  transition: border-color .15s;
+}
+.k-field input:focus,
+.k-field textarea:focus { border-color: #8B1E2D; }
+.k-field textarea { resize: vertical; min-height: 100px; }
+.k-checks {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px;
+  margin-top: 4px;
+}
+.k-check {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 13px;
+  cursor: pointer;
+  color: #424242;
+}
+.k-check input { width: 15px; height: 15px; accent-color: #8B1E2D; flex-shrink: 0; }
+.k-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: #8B1E2D;
+  color: #fff;
+  font-weight: 800;
+  font-size: 14px;
+  padding: 13px 28px;
+  border: none;
+  border-radius: 999px;
+  cursor: pointer;
+  font-family: Montserrat, sans-serif;
+  transition: background .2s;
+  align-self: flex-start;
+}
+.k-btn:hover { background: #6b1523; }
+/* Kontaktdaten */
+.k-info-list { display: flex; flex-direction: column; }
+.k-info-row {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  padding: 12px 0;
+  border-bottom: 1px solid #f0e0e0;
+}
+.k-info-last { border-bottom: none; }
+.k-info-icon {
+  width: 38px; height: 38px; min-width: 38px;
+  background: #f8e8ea;
+  border-radius: 10px;
+  display: flex; align-items: center; justify-content: center;
+}
+.k-info-label {
+  display: block;
+  font-size: 11px; font-weight: 700; color: #888;
+  text-transform: uppercase; letter-spacing: .5px;
+  margin-bottom: 3px;
+}
+.k-info-val { font-size: 14px; color: #0D1B2A; line-height: 1.6; }
+.k-phone { font-size: 18px; font-weight: 900; color: #8B1E2D; text-decoration: none; display: block; }
+.k-email { font-size: 13px; color: #8B1E2D; text-decoration: none; word-break: break-all; }
+/* Erreichbarkeit */
+.k-hours { display: flex; flex-direction: column; }
+.k-hour-row {
+  display: flex; justify-content: space-between; align-items: center;
+  padding: 9px 0; border-bottom: 1px solid #f0e0e0;
+  font-size: 14px;
+}
+.k-hour-row span:first-child { font-weight: 600; color: #0D1B2A; }
+.k-hour-row span:last-child  { color: #60656D; }
+.k-hour-last { border-bottom: none; }
+.k-hotline {
+  background: #f8e8ea; border-radius: 12px;
+  padding: 14px 16px; margin-top: 14px; text-align: center;
+}
+.k-hotline p { font-size: 12px; font-weight: 700; color: #8B1E2D; margin: 0 0 4px; }
+.k-hotline a { font-size: 20px; font-weight: 900; color: #0D1B2A; text-decoration: none; }
+/* Tags */
+.k-tags { display: flex; flex-wrap: wrap; gap: 8px; }
+.k-tag {
+  background: #f8e8ea; border-radius: 999px;
+  padding: 5px 12px; font-size: 12px; font-weight: 600; color: #8B1E2D;
+}
+/* ── MOBILE ── */
+@media (max-width: 768px) {
+  .k-wrap    { grid-template-columns: 1fr !important; }
+  .k-row2    { grid-template-columns: 1fr !important; }
+  .k-checks  { grid-template-columns: 1fr !important; }
+  .k-card    { padding: 20px 18px; }
+  .k-btn     { width: 100%; justify-content: center; }
+  .k-hour-row { flex-direction: column; align-items: flex-start; gap: 2px; }
 }
 </style>
+<main>
 <section class="section">
   <div class="container">
-    <div class="k-grid" style="display:grid;grid-template-columns:1fr 1fr;gap:32px;align-items:start;">
+    <div class="k-wrap">
 
-      <!-- FORMA -->
-      <div>
-        <div style="background:#fff;border-left:4px solid #8B1E2D;border-radius:0 14px 14px 0;
-                    padding:28px 24px;box-shadow:0 4px 20px rgba(139,30,45,.06);
-                    box-sizing:border-box;width:100%;">
-          <h2 style="font-size:22px;font-weight:800;color:#0D1B2A;margin:0 0 24px;">
-            Jetzt Ihre Krankenfahrt anfragen
-          </h2>
-          <form class="form" method="post" action="#"
-                style="display:flex;flex-direction:column;gap:16px;">
+      <!-- ══ LIJEVASKOLONA: FORMA ══════════════════════════ -->
+      <div class="k-col">
+        <div class="k-card">
+          <h2 class="k-title">Jetzt Ihre Krankenfahrt anfragen</h2>
 
-            <div class="k-form-row" style="display:grid;grid-template-columns:1fr 1fr;gap:14px;">
-              <div>
-                <label style="font-size:13px;font-weight:700;display:block;margin-bottom:6px;">Vorname und Nachname *</label>
-                <input type="text" name="name" placeholder="Max Mustermann" required
-                       style="width:100%;padding:12px 14px;border:1.5px solid #e8d0d3;
-                              border-radius:10px;font-size:14px;box-sizing:border-box;outline:none;
-                              font-family:Montserrat,sans-serif;">
+          <form method="post" action="#" class="k-form">
+
+            <div class="k-row2">
+              <div class="k-field">
+                <label>Vorname und Nachname *</label>
+                <input type="text" name="name" placeholder="Max Mustermann" required>
               </div>
-              <div>
-                <label style="font-size:13px;font-weight:700;display:block;margin-bottom:6px;">Telefonnummer *</label>
-                <input type="tel" name="phone" placeholder="+49 ..." required
-                       style="width:100%;padding:12px 14px;border:1.5px solid #e8d0d3;
-                              border-radius:10px;font-size:14px;box-sizing:border-box;outline:none;
-                              font-family:Montserrat,sans-serif;">
+              <div class="k-field">
+                <label>Telefonnummer *</label>
+                <input type="tel" name="phone" placeholder="+49 ..." required>
               </div>
             </div>
 
-            <div>
-              <label style="font-size:13px;font-weight:700;display:block;margin-bottom:6px;">E-Mail</label>
-              <input type="email" name="email" placeholder="ihre@email.de"
-                     style="width:100%;padding:12px 14px;border:1.5px solid #e8d0d3;
-                            border-radius:10px;font-size:14px;box-sizing:border-box;outline:none;
-                            font-family:Montserrat,sans-serif;">
+            <div class="k-field">
+              <label>E-Mail</label>
+              <input type="email" name="email" placeholder="ihre@email.de">
             </div>
 
-            <div class="k-form-row" style="display:grid;grid-template-columns:1fr 1fr;gap:14px;">
-              <div>
-                <label style="font-size:13px;font-weight:700;display:block;margin-bottom:6px;">Abholadresse *</label>
-                <input type="text" name="pickup" placeholder="Straße, Ort" required
-                       style="width:100%;padding:12px 14px;border:1.5px solid #e8d0d3;
-                              border-radius:10px;font-size:14px;box-sizing:border-box;outline:none;
-                              font-family:Montserrat,sans-serif;">
+            <div class="k-row2">
+              <div class="k-field">
+                <label>Abholadresse *</label>
+                <input type="text" name="pickup" placeholder="Straße, Ort" required>
               </div>
-              <div>
-                <label style="font-size:13px;font-weight:700;display:block;margin-bottom:6px;">Zieladresse *</label>
-                <input type="text" name="destination" placeholder="Straße, Ort" required
-                       style="width:100%;padding:12px 14px;border:1.5px solid #e8d0d3;
-                              border-radius:10px;font-size:14px;box-sizing:border-box;outline:none;
-                              font-family:Montserrat,sans-serif;">
+              <div class="k-field">
+                <label>Zieladresse *</label>
+                <input type="text" name="destination" placeholder="Straße, Ort" required>
               </div>
             </div>
 
-            <div class="k-form-row" style="display:grid;grid-template-columns:1fr 1fr;gap:14px;">
-              <div>
-                <label style="font-size:13px;font-weight:700;display:block;margin-bottom:6px;">Datum</label>
-                <input type="date" name="date"
-                       style="width:100%;padding:12px 14px;border:1.5px solid #e8d0d3;
-                              border-radius:10px;font-size:14px;box-sizing:border-box;outline:none;
-                              font-family:Montserrat,sans-serif;">
+            <div class="k-row2">
+              <div class="k-field">
+                <label>Datum</label>
+                <input type="date" name="date">
               </div>
-              <div>
-                <label style="font-size:13px;font-weight:700;display:block;margin-bottom:6px;">Uhrzeit</label>
-                <input type="time" name="time"
-                       style="width:100%;padding:12px 14px;border:1.5px solid #e8d0d3;
-                              border-radius:10px;font-size:14px;box-sizing:border-box;outline:none;
-                              font-family:Montserrat,sans-serif;">
+              <div class="k-field">
+                <label>Uhrzeit</label>
+                <input type="time" name="time">
               </div>
             </div>
 
-            <div>
-              <label style="font-size:13px;font-weight:700;display:block;margin-bottom:10px;">Art der Fahrt</label>
-              <div class="k-check-grid" style="display:grid;grid-template-columns:1fr 1fr;gap:8px;">
-                <label style="display:flex;align-items:center;gap:8px;font-size:14px;cursor:pointer;padding:4px 0;">
-                  <input type="checkbox" name="type" value="Krankenfahrt" style="width:16px;height:16px;accent-color:#8B1E2D;flex-shrink:0;"> Krankenfahrt
-                </label>
-                <label style="display:flex;align-items:center;gap:8px;font-size:14px;cursor:pointer;padding:4px 0;">
-                  <input type="checkbox" name="type" value="Rollstuhlfahrt" style="width:16px;height:16px;accent-color:#8B1E2D;flex-shrink:0;"> Rollstuhlfahrt
-                </label>
-                <label style="display:flex;align-items:center;gap:8px;font-size:14px;cursor:pointer;padding:4px 0;">
-                  <input type="checkbox" name="type" value="Liegendtransport" style="width:16px;height:16px;accent-color:#8B1E2D;flex-shrink:0;"> Liegendtransport
-                </label>
-                <label style="display:flex;align-items:center;gap:8px;font-size:14px;cursor:pointer;padding:4px 0;">
-                  <input type="checkbox" name="type" value="Dialysefahrt" style="width:16px;height:16px;accent-color:#8B1E2D;flex-shrink:0;"> Dialysefahrt
-                </label>
-                <label style="display:flex;align-items:center;gap:8px;font-size:14px;cursor:pointer;padding:4px 0;">
-                  <input type="checkbox" name="type" value="Chemotherapie" style="width:16px;height:16px;accent-color:#8B1E2D;flex-shrink:0;"> Chemotherapie
-                </label>
-                <label style="display:flex;align-items:center;gap:8px;font-size:14px;cursor:pointer;padding:4px 0;">
-                  <input type="checkbox" name="type" value="Strahlentherapie" style="width:16px;height:16px;accent-color:#8B1E2D;flex-shrink:0;"> Strahlentherapie
-                </label>
-                <label style="display:flex;align-items:center;gap:8px;font-size:14px;cursor:pointer;padding:4px 0;">
-                  <input type="checkbox" name="type" value="Rehafahrt" style="width:16px;height:16px;accent-color:#8B1E2D;flex-shrink:0;"> Rehafahrt
-                </label>
-                <label style="display:flex;align-items:center;gap:8px;font-size:14px;cursor:pointer;padding:4px 0;">
-                  <input type="checkbox" name="type" value="Privatfahrt" style="width:16px;height:16px;accent-color:#8B1E2D;flex-shrink:0;"> Privatfahrt
-                </label>
+            <div class="k-field">
+              <label>Art der Fahrt</label>
+              <div class="k-checks">
+                <label class="k-check"><input type="checkbox" name="type" value="Krankenfahrt"> Krankenfahrt</label>
+                <label class="k-check"><input type="checkbox" name="type" value="Rollstuhlfahrt"> Rollstuhlfahrt</label>
+                <label class="k-check"><input type="checkbox" name="type" value="Liegendtransport"> Liegendtransport</label>
+                <label class="k-check"><input type="checkbox" name="type" value="Dialysefahrt"> Dialysefahrt</label>
+                <label class="k-check"><input type="checkbox" name="type" value="Chemotherapie"> Chemotherapie</label>
+                <label class="k-check"><input type="checkbox" name="type" value="Strahlentherapie"> Strahlentherapie</label>
+                <label class="k-check"><input type="checkbox" name="type" value="Rehafahrt"> Rehafahrt</label>
+                <label class="k-check"><input type="checkbox" name="type" value="Privatfahrt"> Privatfahrt</label>
               </div>
             </div>
 
-            <div>
-              <label style="font-size:13px;font-weight:700;display:block;margin-bottom:6px;">Nachricht</label>
-              <textarea name="message" rows="4" placeholder="Weitere Informationen zu Ihrer Fahrt..."
-                        style="width:100%;padding:12px 14px;border:1.5px solid #e8d0d3;
-                               border-radius:10px;font-size:14px;box-sizing:border-box;outline:none;
-                               resize:vertical;font-family:Montserrat,sans-serif;"></textarea>
+            <div class="k-field">
+              <label>Nachricht</label>
+              <textarea name="message" rows="4" placeholder="Weitere Informationen zu Ihrer Fahrt..."></textarea>
             </div>
 
-            <div>
-              <button type="submit"
-                      style="display:inline-flex;align-items:center;gap:8px;
-                             background:#8B1E2D;color:#fff;font-weight:800;font-size:14px;
-                             padding:13px 28px;border:none;border-radius:999px;cursor:pointer;
-                             font-family:Montserrat,sans-serif;transition:background .2s;">
-                Anfrage absenden
-              </button>
-            </div>
-
+            <button type="submit" class="k-btn">Anfrage absenden</button>
           </form>
         </div>
       </div>
 
-      <!-- DESNA KOLONA: Kontaktdaten + Erreichbarkeit + Einsatzgebiet -->
-      <div style="display:flex;flex-direction:column;gap:20px;">
+      <!-- ══ DESNA KOLONA: INFO ════════════════════════════ -->
+      <div class="k-col">
 
         <!-- Kontaktdaten -->
-        <div style="background:#fff;border-left:4px solid #8B1E2D;border-radius:0 14px 14px 0;
-                    padding:24px;box-shadow:0 4px 20px rgba(139,30,45,.06);
-                    box-sizing:border-box;width:100%;">
-          <h3 style="font-size:18px;font-weight:800;margin:0 0 18px;color:#0D1B2A;">Kontaktdaten</h3>
-
-          <div style="display:flex;flex-direction:column;gap:0;">
-            <div style="display:flex;gap:14px;align-items:flex-start;padding:12px 0;border-bottom:1px solid #f0e0e0;">
-              <div style="width:44px;height:44px;min-width:44px;background:#f8e8ea;border-radius:12px;
-                          display:flex;align-items:center;justify-content:center;">
-                <svg viewBox="0 0 24 24" fill="none" stroke="#8B1E2D" stroke-width="2" width="22" height="22">
+        <div class="k-card">
+          <h3 class="k-subtitle">Kontaktdaten</h3>
+          <div class="k-info-list">
+            <div class="k-info-row">
+              <div class="k-info-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="#8B1E2D" stroke-width="2"
+                     stroke-linecap="round" stroke-linejoin="round" width="20" height="20">
                   <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/>
                   <circle cx="12" cy="10" r="3"/>
                 </svg>
               </div>
               <div>
-                <strong style="display:block;font-size:13px;color:#60656D;margin-bottom:4px;">Adresse</strong>
-                <span style="font-size:14px;line-height:1.6;color:#0D1B2A;">
-                  St. Christophorus Krankenfahrdienst GmbH<br>
-                  Münchener Str. 22<br>85614 Kirchseeon
-                </span>
+                <span class="k-info-label">Adresse</span>
+                <span class="k-info-val">St. Christophorus Krankenfahrdienst GmbH<br>
+                Münchener Str. 22, 85614 Kirchseeon</span>
               </div>
             </div>
-
-            <div style="display:flex;gap:14px;align-items:center;padding:12px 0;border-bottom:1px solid #f0e0e0;">
-              <div style="width:44px;height:44px;min-width:44px;background:#f8e8ea;border-radius:12px;
-                          display:flex;align-items:center;justify-content:center;">
-                <svg viewBox="0 0 24 24" fill="none" stroke="#8B1E2D" stroke-width="2" width="22" height="22">
+            <div class="k-info-row">
+              <div class="k-info-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="#8B1E2D" stroke-width="2"
+                     stroke-linecap="round" stroke-linejoin="round" width="20" height="20">
                   <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.77 1h3a2 2 0 0 1 2 1.72c.127.96.361 1.9.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.69a16 16 0 0 0 6 6l1.06-1.06a2 2 0 0 1 2.11-.45c.907.34 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/>
                 </svg>
               </div>
               <div>
-                <strong style="display:block;font-size:13px;color:#60656D;margin-bottom:2px;">Telefon</strong>
-                <a href="tel:+4980922320174"
-                   style="font-size:18px;font-weight:900;color:#8B1E2D;text-decoration:none;">
-                  08092 2320174
-                </a>
+                <span class="k-info-label">Telefon</span>
+                <a href="tel:+4980922320174" class="k-phone">08092 2320174</a>
               </div>
             </div>
-
-            <div style="display:flex;gap:14px;align-items:center;padding:12px 0;">
-              <div style="width:44px;height:44px;min-width:44px;background:#f8e8ea;border-radius:12px;
-                          display:flex;align-items:center;justify-content:center;">
-                <svg viewBox="0 0 24 24" fill="none" stroke="#8B1E2D" stroke-width="2" width="22" height="22">
+            <div class="k-info-row k-info-last">
+              <div class="k-info-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="#8B1E2D" stroke-width="2"
+                     stroke-linecap="round" stroke-linejoin="round" width="20" height="20">
                   <rect x="2" y="4" width="20" height="16" rx="2"/>
                   <polyline points="2,6 12,13 22,6"/>
                 </svg>
               </div>
               <div>
-                <strong style="display:block;font-size:13px;color:#60656D;margin-bottom:2px;">E-Mail</strong>
-                <a href="mailto:info@st-christophorus-krankenfahrdienst.de"
-                   style="font-size:13px;color:#8B1E2D;text-decoration:none;word-break:break-all;">
+                <span class="k-info-label">E-Mail</span>
+                <a href="mailto:info@st-christophorus-krankenfahrdienst.de" class="k-email">
                   info@st-christophorus-krankenfahrdienst.de
                 </a>
               </div>
@@ -275,41 +333,34 @@
         </div>
 
         <!-- Erreichbarkeit -->
-        <div style="background:#fff;border-left:4px solid #8B1E2D;border-radius:0 14px 14px 0;
-                    padding:24px;box-shadow:0 4px 20px rgba(139,30,45,.06);
-                    box-sizing:border-box;width:100%;">
-          <h3 style="font-size:18px;font-weight:800;margin:0 0 16px;color:#0D1B2A;">Unsere Erreichbarkeit</h3>
-          <div style="display:flex;flex-direction:column;gap:0;">
-            <div style="display:flex;justify-content:space-between;padding:10px 0;border-bottom:1px solid #f0e0e0;">
-              <span style="font-weight:600;font-size:14px;">Montag – Freitag</span>
-              <span style="color:#60656D;font-size:14px;">07:00 – 18:00 Uhr</span>
-            </div>
-            <div style="display:flex;justify-content:space-between;padding:10px 0;border-bottom:1px solid #f0e0e0;">
-              <span style="font-weight:600;font-size:14px;">Samstag</span>
-              <span style="color:#60656D;font-size:14px;">Nach Vereinbarung</span>
-            </div>
-            <div style="display:flex;justify-content:space-between;padding:10px 0;">
-              <span style="font-weight:600;font-size:14px;">Sonn- und Feiertage</span>
-              <span style="color:#60656D;font-size:14px;">Nach Vereinbarung</span>
-            </div>
+        <div class="k-card">
+          <h3 class="k-subtitle">Unsere Erreichbarkeit</h3>
+          <div class="k-hours">
+            <div class="k-hour-row"><span>Montag – Freitag</span><span>07:00 – 18:00 Uhr</span></div>
+            <div class="k-hour-row"><span>Samstag</span><span>Nach Vereinbarung</span></div>
+            <div class="k-hour-row k-hour-last"><span>Sonn- und Feiertage</span><span>Nach Vereinbarung</span></div>
           </div>
-          <div style="background:#f8e8ea;border-radius:12px;padding:16px;margin-top:16px;text-align:center;">
-            <p style="font-size:13px;color:#8B1E2D;font-weight:700;margin:0 0 4px;">24h Rufbereitschaft</p>
-            <a href="tel:+4980922320174"
-               style="font-size:22px;font-weight:900;color:#0D1B2A;text-decoration:none;display:block;">
-              08092 2320174
-            </a>
+          <div class="k-hotline">
+            <p>24h Rufbereitschaft</p>
+            <a href="tel:+4980922320174">08092 2320174</a>
           </div>
         </div>
 
         <!-- Einsatzgebiet -->
-        <div style="background:#fff;border-left:4px solid #8B1E2D;border-radius:0 14px 14px 0;
-                    padding:24px;box-shadow:0 4px 20px rgba(139,30,45,.06);
-                    box-sizing:border-box;width:100%;">
-          <h3 style="font-size:18px;font-weight:800;margin:0 0 10px;color:#0D1B2A;">Einsatzgebiet</h3>
-          <p style="font-size:14px;color:#60656D;margin:0 0 14px;">Von Kirchseeon täglich unterwegs nach:</p>
-          <div style="display:flex;flex-wrap:wrap;gap:8px;">
-            <span style="background:#f8e8ea;border-radius:999px;padding:5px 12px;font-size:12px;font-weight:600;color:#8B1E2D;">Kirchseeon</span><span style="background:#f8e8ea;border-radius:999px;padding:5px 12px;font-size:12px;font-weight:600;color:#8B1E2D;">Grafing</span><span style="background:#f8e8ea;border-radius:999px;padding:5px 12px;font-size:12px;font-weight:600;color:#8B1E2D;">Ebersberg</span><span style="background:#f8e8ea;border-radius:999px;padding:5px 12px;font-size:12px;font-weight:600;color:#8B1E2D;">München</span><span style="background:#f8e8ea;border-radius:999px;padding:5px 12px;font-size:12px;font-weight:600;color:#8B1E2D;">Vaterstetten</span><span style="background:#f8e8ea;border-radius:999px;padding:5px 12px;font-size:12px;font-weight:600;color:#8B1E2D;">Markt Schwaben</span><span style="background:#f8e8ea;border-radius:999px;padding:5px 12px;font-size:12px;font-weight:600;color:#8B1E2D;">Rosenheim</span><span style="background:#f8e8ea;border-radius:999px;padding:5px 12px;font-size:12px;font-weight:600;color:#8B1E2D;">Bad Aibling</span><span style="background:#f8e8ea;border-radius:999px;padding:5px 12px;font-size:12px;font-weight:600;color:#8B1E2D;">Wasserburg am Inn</span><span style="background:#f8e8ea;border-radius:999px;padding:5px 12px;font-size:12px;font-weight:600;color:#8B1E2D;">Ganz Bayern</span>
+        <div class="k-card">
+          <h3 class="k-subtitle">Einsatzgebiet</h3>
+          <p style="font-size:14px;color:#60656D;margin:0 0 12px;">Von Kirchseeon täglich unterwegs nach:</p>
+          <div class="k-tags">
+            <span class="k-tag">Kirchseeon</span>
+            <span class="k-tag">Grafing</span>
+            <span class="k-tag">Ebersberg</span>
+            <span class="k-tag">München</span>
+            <span class="k-tag">Vaterstetten</span>
+            <span class="k-tag">Markt Schwaben</span>
+            <span class="k-tag">Rosenheim</span>
+            <span class="k-tag">Bad Aibling</span>
+            <span class="k-tag">Wasserburg am Inn</span>
+            <span class="k-tag">Ganz Bayern</span>
           </div>
         </div>
 

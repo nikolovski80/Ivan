@@ -159,6 +159,7 @@
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 20px;
+  align-items: stretch;
 }
 .leistung-card {
   background: #fff;
@@ -167,6 +168,11 @@
   border: 1px solid #e8d0d3;
   box-shadow: 0 4px 20px rgba(139,30,45,.06);
   transition: transform .25s, box-shadow .25s;
+  display: flex;
+  flex-direction: column;
+}
+.leistung-card p {
+  flex: 1;
 }
 .leistung-card:hover {
   transform: translateY(-4px);
