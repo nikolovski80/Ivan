@@ -124,27 +124,33 @@
 .k-field textarea:focus { border-color: #8B1E2D; }
 .k-field textarea { resize: vertical; min-height: 100px; }
 .k-checks {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 8px;
-  margin-top: 4px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 6px;
   width: 100%;
-  box-sizing: border-box;
-  overflow: hidden;
 }
 .k-check {
   display: flex;
   align-items: center;
-  gap: 8px;
-  font-size: 13px;
+  gap: 10px;
+  font-size: 14px;
   cursor: pointer;
   color: #424242;
+  padding: 8px 12px;
+  background: #fdf5f5;
+  border-radius: 8px;
+  border: 1px solid #e8d0d3;
   width: 100%;
   box-sizing: border-box;
-  overflow: hidden;
-  min-width: 0;
 }
-.k-check input { width: 15px; height: 15px; accent-color: #8B1E2D; flex-shrink: 0; }
+.k-check input {
+  width: 16px;
+  height: 16px;
+  accent-color: #8B1E2D;
+  flex-shrink: 0;
+  margin: 0;
+}
 .k-btn {
   display: inline-flex;
   align-items: center;
