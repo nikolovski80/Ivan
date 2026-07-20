@@ -2292,3 +2292,159 @@ body.apg-menu-open .scroll-top{
 @media(max-width:600px){
   .footer-grid { grid-template-columns: 1fr !important; }
 }
+
+
+/* ── Global overflow fix ───────────────────────── */
+*, *::before, *::after { box-sizing: border-box; }
+body { overflow-x: hidden; }
+.container { width: 100%; max-width: 1160px; margin: 0 auto; padding: 0 24px; }
+img { max-width: 100%; height: auto; }
+
+/* ── Content box – popravi overflow na mobitelu ── */
+.content-box {
+  width: 100%;
+  overflow: hidden;
+  border-left: 4px solid #8B1E2D !important;
+  border-top: none !important;
+  border-right: none !important;
+  border-bottom: none !important;
+  background: #fff !important;
+  border-radius: 0 14px 14px 0 !important;
+  padding: 24px 24px 24px 24px !important;
+  margin-bottom: 20px;
+}
+/* Razmak ispod roze vorteile boxa */
+.content-box + p { margin-top: 16px; }
+div[style*="background:#f8e8ea"][style*="border-radius:18px"],
+div[style*="background: #f8e8ea"][style*="border-radius: 18px"] {
+  margin-top: 24px !important;
+  margin-bottom: 8px !important;
+}
+
+/* ── Two-col responsive ─────────────────────────── */
+.two-col {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 32px;
+  align-items: start;
+}
+@media (max-width: 768px) {
+  .two-col {
+    grid-template-columns: 1fr !important;
+    gap: 20px !important;
+  }
+  .two-col > div { width: 100% !important; }
+  /* Vorteile box na mobitelu */
+  div[style*="background:#f8e8ea"] {
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    width: 100% !important;
+    box-sizing: border-box !important;
+  }
+}
+
+/* ── Ziel grid 2 kolone na mobitelu ─────────────── */
+@media (max-width: 768px) {
+  .ziel-grid {
+    grid-template-columns: repeat(2, 1fr) !important;
+  }
+  .ziel-item {
+    padding: 16px 10px !important;
+    width: 100% !important;
+  }
+  .ziel-label { font-size: 12px !important; }
+}
+
+/* ── Lista check items ─────────────────────────── */
+.list {
+  list-style: none;
+  padding: 0;
+  margin: 10px 0;
+}
+.list li {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  padding: 7px 0;
+  border-bottom: 1px solid #f0e8e8;
+  font-size: 14px;
+  color: #424242;
+  line-height: 1.5;
+  break-inside: avoid;
+}
+.list li::before {
+  content: "";
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  min-width: 20px;
+  background: #8B1E2D;
+  border-radius: 50%;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 24 24' fill='none' stroke='white' stroke-width='3' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M20 6L9 17l-5-5'/%3E%3C/svg%3E");
+  background-size: 70%;
+  background-position: center;
+  background-repeat: no-repeat;
+  flex-shrink: 0;
+  margin-top: 1px;
+}
+/* Columns lista na mobitelu = 1 kolona */
+@media (max-width: 600px) {
+  .list[style*="columns"] {
+    columns: 1 !important;
+  }
+}
+
+/* ── Loader – logo umjesto spinner-a ────────────── */
+#apg-loader {
+  position: fixed;
+  inset: 0;
+  background: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+  transition: opacity .4s ease, visibility .4s ease;
+}
+#apg-loader-ring {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+  animation: loaderPulse 1.4s ease-in-out infinite;
+}
+#apg-loader-ring img {
+  width: 140px !important;
+  height: auto !important;
+  border-radius: 0 !important;
+  border: none !important;
+}
+@keyframes loaderPulse {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50%       { opacity: .7; transform: scale(.95); }
+}
+
+/* ── Mega menu overflow fix ─────────────────────── */
+.mega-menu { overflow: visible; }
+.mega-link {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 10px 12px;
+  border-radius: 8px;
+  text-decoration: none;
+  transition: background .15s;
+}
+.mega-link:hover { background: #f8e8ea; }
+.mega-link img { flex-shrink: 0; }
+
+/* ── Kontakt forma fix ──────────────────────────── */
+.form input, .form textarea, .form select {
+  width: 100%;
+  box-sizing: border-box;
+  max-width: 100%;
+}
+@media (max-width: 600px) {
+  .form > div[style*="grid-template-columns:1fr 1fr"] {
+    grid-template-columns: 1fr !important;
+  }
+}
