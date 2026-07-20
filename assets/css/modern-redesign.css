@@ -2305,7 +2305,7 @@ img { max-width: 100%; height: auto; }
 /* ── Content box – popravi overflow na mobitelu ── */
 .content-box {
   width: 100%;
-  overflow: hidden;
+  overflow: visible;
   border-left: 4px solid #8B1E2D !important;
   border-top: none !important;
   border-right: none !important;
@@ -2362,48 +2362,36 @@ div[style*="background: #f8e8ea"][style*="border-radius: 18px"] {
   list-style: none;
   padding: 0;
   margin: 10px 0;
+  columns: unset !important;
+  display: flex !important;
+  flex-direction: column;
 }
 .list li {
-  display: flex;
+  display: flex !important;
   align-items: flex-start;
   gap: 12px;
   padding: 8px 0;
-  border-bottom: 1px solid #f0e8e8;
+  border-bottom: 1px solid #f0e0e0;
   font-size: 14px;
   color: #424242;
-  line-height: 1.55;
+  line-height: 1.6;
+  width: 100%;
+  box-sizing: border-box;
 }
-.list li::before {
-  content: "";
-  display: block;
+.list li::before { display: none !important; content: none !important; }
+.list li .chk {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
   width: 22px;
   height: 22px;
   min-width: 22px;
-  max-width: 22px;
-  background-color: #8B1E2D;
+  background: #8B1E2D;
   border-radius: 50%;
-  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 24 24' fill='none' stroke='white' stroke-width='3' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M20 6L9 17l-5-5'/%3E%3C/svg%3E");
-  background-size: 65%;
-  background-position: center;
-  background-repeat: no-repeat;
   flex-shrink: 0;
-  margin-top: 2px;
+  margin-top: 1px;
 }
-/* Columns: 1 na svim veličinama da se ne lomi */
-.list[style*="columns"] {
-  columns: unset !important;
-  display: flex;
-  flex-direction: column;
-}
-@media(max-width: 900px) {
-  .list { columns: 1 !important; }
-}
-/* Columns lista na mobitelu = 1 kolona */
-@media (max-width: 600px) {
-  .list[style*="columns"] {
-    columns: 1 !important;
-  }
-}
+.list li .chk svg { width:13px;height:13px; }
 
   50%       { opacity: .7; transform: scale(.95); }
 }
@@ -2428,8 +2416,85 @@ div[style*="background: #f8e8ea"][style*="border-radius: 18px"] {
   box-sizing: border-box;
   max-width: 100%;
 }
-@media (max-width: 600px) {
-  .form > div[style*="grid-template-columns:1fr 1fr"] {
+@media (max-width: 768px) {
+  .kontakt-grid { grid-template-columns: 1fr !important; }
+  .kontakt-grid > div { width: 100% !important; max-width: 100% !important; }
+  .form > div[style*="grid"] { grid-template-columns: 1fr !important; }
+  .form input, .form textarea, .form select {
+    width: 100% !important; max-width: 100% !important;
+  }
+}
+
+/* ══ FINAL MOBILE FIX ══════════════════════════════════ */
+@media (max-width: 768px) {
+  /* Sve grid/flex kontejnere na mobitelu */
+  .kontakt-grid,
+  .kontakt-grid > div,
+  div[style*="grid-template-columns:1fr 1fr"],
+  div[style*="grid-template-columns: 1fr 1fr"] {
+    grid-template-columns: 1fr !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    box-sizing: border-box !important;
+  }
+  /* Forma polja */
+  input, textarea, select {
+    width: 100% !important;
+    max-width: 100% !important;
+    box-sizing: border-box !important;
+  }
+  /* Checkbox grid */
+  div[style*="grid-template-columns:1fr 1fr"][style*="gap:8px"] {
     grid-template-columns: 1fr !important;
   }
+  /* Content box ne smije biti širi od ekrana */
+  .content-box {
+    width: 100% !important;
+    max-width: 100% !important;
+    box-sizing: border-box !important;
+    overflow: visible !important;
+  }
+  /* Sekcija padding */
+  .section { padding-left: 16px !important; padding-right: 16px !important; }
+  .container { padding-left: 16px !important; padding-right: 16px !important; }
+}
+
+/* ── .list li ikona – finalni fix ──────────────────── */
+.list { list-style: none !important; padding: 0 !important; }
+.list li {
+  display: flex !important;
+  flex-direction: row !important;
+  align-items: flex-start !important;
+  gap: 10px !important;
+  padding: 8px 0 !important;
+  border-bottom: 1px solid #f0e0e0 !important;
+  width: 100% !important;
+  box-sizing: border-box !important;
+  line-height: 1.6 !important;
+  font-size: 14px !important;
+  color: #424242 !important;
+  break-inside: avoid !important;
+  column-break-inside: avoid !important;
+}
+.list li::before { display: none !important; }
+.list li .chk {
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  width: 22px !important;
+  height: 22px !important;
+  min-width: 22px !important;
+  max-width: 22px !important;
+  background: #8B1E2D !important;
+  border-radius: 50% !important;
+  flex-shrink: 0 !important;
+  margin-top: 1px !important;
+}
+.list li .chk svg { width: 13px !important; height: 13px !important; }
+/* Columns fix */
+.list[style*="columns"] {
+  columns: unset !important;
+  -webkit-columns: unset !important;
+  display: flex !important;
+  flex-direction: column !important;
 }
