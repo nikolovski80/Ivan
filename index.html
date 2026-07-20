@@ -522,23 +522,28 @@
       <div class="section-label">Über uns</div>
       <h2>Herzlich willkommen bei der St. Christophorus Krankenfahrdienst GmbH</h2>
     </div>
-    <div class="two-col" style="grid-template-columns:1fr 1fr; gap:48px; align-items:center;">
-      <div class="content-box">
-        <p>Mobilität bedeutet Lebensqualität – besonders dann, wenn gesundheitliche Einschränkungen den Alltag erschweren. Unser Ziel ist es, Menschen sicher, pünktlich und komfortabel zu ihren medizinischen Terminen zu begleiten.</p>
-        <p>Ob Arztbesuch, Krankenhausaufenthalt, Dialyse, Chemotherapie, Reha oder private Krankenfahrt – wir stehen Ihnen mit einem zuverlässigen und professionellen Fahrdienst zur Seite.</p>
-        <p>Unsere Fahrgäste können sich auf moderne Fahrzeuge, freundliche Fahrer und einen Service verlassen, der weit über den eigentlichen Transport hinausgeht. <strong>Für uns steht der Mensch immer im Mittelpunkt.</strong></p>
-        <div style="display:flex;gap:16px;flex-wrap:wrap;margin-top:8px;">
-          <a href="tel:+4980922320174" class="btn">📞 Jetzt anrufen</a>
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:center;" class="willkommen-grid">
+      <div style="background:#fff;border-left:4px solid #8B1E2D;border-radius:0 14px 14px 0;padding:28px;box-shadow:0 4px 20px rgba(139,30,45,.06);">
+        <p style="font-size:15px;line-height:1.8;color:#424242;margin:0 0 14px;">Mobilität bedeutet Lebensqualität – besonders dann, wenn gesundheitliche Einschränkungen den Alltag erschweren. Unser Ziel ist es, Menschen sicher, pünktlich und komfortabel zu ihren medizinischen Terminen zu begleiten.</p>
+        <p style="font-size:15px;line-height:1.8;color:#424242;margin:0 0 14px;">Ob Arztbesuch, Krankenhausaufenthalt, Dialyse, Chemotherapie, Reha oder private Krankenfahrt – wir stehen Ihnen mit einem zuverlässigen und professionellen Fahrdienst zur Seite.</p>
+        <p style="font-size:15px;line-height:1.8;color:#424242;margin:0 0 20px;">Unsere Fahrgäste können sich auf moderne Fahrzeuge, freundliche Fahrer und einen Service verlassen, der weit über den eigentlichen Transport hinausgeht. <strong>Für uns steht der Mensch immer im Mittelpunkt.</strong></p>
+        <div style="display:flex;gap:14px;flex-wrap:wrap;">
+          <a href="tel:+4980922320174" class="btn" style="display:inline-flex;align-items:center;gap:8px;">📞 Jetzt anrufen</a>
           <a href="kontakt.html" class="btn btn-light">Fahrt anfragen</a>
         </div>
       </div>
-      <div class="hero-photo" style="position:relative;">
+      <div style="display:flex;align-items:center;justify-content:center;">
         <img src="assets/img/services/kombi.png" 
              alt="St. Christophorus Krankenfahrdienst GmbH – Unser Fahrzeug"
-             style="width:100%;height:auto;border-radius:16px;
-                    box-shadow:0 16px 48px rgba(13,27,42,.18);">
+             style="width:100%;max-width:560px;height:auto;border-radius:12px;
+                    box-shadow:0 16px 48px rgba(13,27,42,.15);display:block;">
       </div>
     </div>
+    <style>
+    @media(max-width:768px){
+      .willkommen-grid{ grid-template-columns:1fr !important; }
+    }
+    </style>
   </div>
 </section>
 
