@@ -253,27 +253,7 @@
 }
 
 /* Zielgruppen */
-.ziel-grid {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 14px;
-}
-.ziel-item {
-  background: #fff;
-  border-radius: 14px;
-  padding: 18px 16px;
-  text-align: center;
-  border: 1px solid #e8d0d3;
-  font-size: 14px;
-  font-weight: 700;
-  color: #0D1B2A;
-  box-shadow: 0 2px 10px rgba(139,30,45,.05);
-}
-.ziel-item span {
-  display: block;
-  font-size: 28px;
-  margin-bottom: 8px;
-}
+
 
 /* Kontakt banner */
 .kontakt-banner {
@@ -366,19 +346,17 @@
 
 @media (max-width: 900px) {
   .leistungen-grid { grid-template-columns: repeat(2, 1fr); }
-  .ziel-grid { grid-template-columns: repeat(2, 1fr); }
   .kontakt-banner { grid-template-columns: 1fr; }
   .warum-grid { grid-template-columns: 1fr; }
 }
 @media (max-width: 600px) {
   .leistungen-grid { grid-template-columns: 1fr; }
-  .ziel-grid { grid-template-columns: repeat(2, 1fr); }
   .hero-section { padding: 56px 0 48px; }
   .kontakt-banner { padding: 28px 20px; }
   .versprechen-box { padding: 28px 24px; }
 }
 
-/* Für wen wir fahren – SVG ikone i centriranje */
+/* Für wen wir fahren */
 .ziel-grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
@@ -391,6 +369,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: flex-start;
   text-align: center;
   border: 1px solid #e8d0d3;
   box-shadow: 0 2px 10px rgba(139,30,45,.05);
@@ -411,14 +390,11 @@
   background: #f8e8ea;
   border-radius: 14px;
   flex-shrink: 0;
-  align-self: center;
 }
 .ziel-svg svg {
-  display: block;
   width: 28px;
   height: 28px;
-  margin: 0;
-  flex-shrink: 0;
+  display: block;
 }
 .ziel-label {
   font-size: 13px;
@@ -426,21 +402,23 @@
   color: #0D1B2A;
   line-height: 1.4;
 }
+/* Tablet: 2 kolone */
 @media (max-width: 900px) {
   .ziel-grid { grid-template-columns: repeat(2, 1fr); }
 }
+/* Mobitel: 1 kolona, red layout */
 @media (max-width: 600px) {
-  .ziel-grid {
-    grid-template-columns: 1fr !important;
-  }
+  .ziel-grid { grid-template-columns: 1fr; }
   .ziel-item {
-    flex-direction: row !important;
-    text-align: left !important;
-    padding: 14px 16px !important;
-    gap: 16px !important;
-    align-items: center !important;
+    flex-direction: row;
+    text-align: left;
+    padding: 14px 16px;
+    gap: 14px;
+    align-items: center;
+    justify-content: flex-start;
   }
-  .ziel-label { font-size: 15px !important; }
+  .ziel-svg { align-self: center; flex-shrink: 0; }
+  .ziel-label { font-size: 15px; }
 }
 </style>
 <link rel="icon" type="image/png" href="assets/img/logo/favicon.png">
